@@ -14,11 +14,29 @@ hermes profile install github.com/Freakazoid78tr/volcanic-hermes-doctor --name v
 hermes -p volcanic-hermes-doctor chat
 ```
 
+## Update
+
+```bash
+hermes profile update volcanic-hermes-doctor
+```
+
 One-shot example:
 
 ```bash
-hermes -p volcanic-hermes-doctor chat -q "Help with the task this profile is designed for."
+hermes -p volcanic-hermes-doctor chat -q "Hermes profile install failed with this error: <redacted error>. Diagnose likely causes and give verification steps."
 ```
+
+## Expected output shape
+
+A good diagnosis should look like:
+
+- Symptom: the visible failure in one sentence.
+- Subsystem: install, config, provider/model, toolsets, gateway, MCP, cron, or external service.
+- Evidence: exact non-secret clues from the error/logs.
+- Most likely cause: ranked, not guessed as fact.
+- Fix steps: smallest safe commands first.
+- Verify with: command or behavior that proves the fix worked.
+- If still broken: a redacted issue report using `templates/redacted_issue_report.md`.
 
 ## Example tasks
 
@@ -36,6 +54,12 @@ This profile requests web access for public docs/issues, terminal/file/code exec
 Do not paste API keys, passwords, auth tokens, private keys, cookies, wallet files, or full unredacted `.env` content. Use placeholders like `OPENROUTER_API_KEY is set but redacted`.
 
 
+## Requirements
+
+- Hermes Agent >= 0.15.0.
+- Python 3 for the optional local secret/private-state scanner.
+- If you do not have access to the default model in `config.yaml`, override with `--model` or edit the profile config after install.
+
 ## What is included
 
 - `SOUL.md` — profile persona and operating principles.
@@ -44,6 +68,7 @@ Do not paste API keys, passwords, auth tokens, private keys, cookies, wallet fil
 - `profile.yaml` — short registry-facing profile metadata.
 - `.env.EXAMPLE` — empty placeholder file; no secrets.
 - `skills/` — bundled reusable workflows for this profile.
+- `templates/redacted_issue_report.md` — reusable safe issue-report template.
 - `scripts/profile_secret_scan.py` — local scanner for common secrets/private state.
 - `cron/README.md` — explicit note that no cron jobs are enabled by default.
 

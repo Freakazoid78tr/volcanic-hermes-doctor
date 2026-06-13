@@ -18,3 +18,4 @@ distribution_owned:
   - scripts/profile_secret_scan.py
   - skills/hermes-troubleshooting-triage/SKILL.md
   - skills/redacted-issue-report/SKILL.md
+  - templates/redacted_issue_report.md
