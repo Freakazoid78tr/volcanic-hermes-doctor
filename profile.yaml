@@ -1,0 +1,9 @@
+name: volcanic-hermes-doctor
+description: "Public-safe Hermes troubleshooting profile for diagnosing install, config, provider, toolset, profile, and runtime issues from redacted logs."
+category: support
+tags:
+  - hermes
+  - troubleshooting
+  - config
+  - support
+  - diagnostics
