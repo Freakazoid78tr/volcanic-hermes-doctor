@@ -5,7 +5,7 @@ Public-safe Hermes troubleshooting profile for diagnosing install, config, provi
 ## Install
 
 ```bash
-hermes profile install github.com/Freakazoid78tr/volcanic-hermes-doctor --name volcanic-hermes-doctor
+hermes profile install github.com/VolcanicWorks/volcanic-hermes-doctor --name volcanic-hermes-doctor
 ```
 
 ## Run
@@ -76,14 +76,14 @@ Do not paste API keys, passwords, auth tokens, private keys, cookies, wallet fil
 
 ```bash
 python3 scripts/profile_secret_scan.py .
-hermes profile install github.com/Freakazoid78tr/volcanic-hermes-doctor --name volcanic-hermes-doctor-smoke -y
+hermes profile install github.com/VolcanicWorks/volcanic-hermes-doctor --name volcanic-hermes-doctor-smoke -y
 hermes profile show volcanic-hermes-doctor-smoke
 hermes profile delete volcanic-hermes-doctor-smoke -y
 ```
 
 ## Branding/provenance
 
-Published under the `Freakazoid78tr` GitHub account with `Volcanic` as the profile author/brand. This is a public-service profile, not a private Volcanic operating profile.
+Published under the `VolcanicWorks` GitHub account with `Volcanic` as the profile author/brand. This is a public-service profile, not a private Volcanic operating profile.
 
 ## License
 
